@@ -1,12 +1,15 @@
-package com.example.chadformfitness
+package com.example.chadformfitness.ui.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
+import com.example.chadformfitness.R
 import com.example.chadformfitness.databinding.ActivityMainBinding
+import com.example.chadformfitness.ui.fragment.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,18 +20,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        // Create fragment
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<HomeFragment>(R.id.fcv_main)
+            }
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        setContentView(R.layout.activity_main)
-
-        val recyclerView = binding.rvWorkoutSessionList
-
-        val numberOfColumns = 2
-
-        recyclerView.layoutManager =
-            GridLayoutManager(this, numberOfColumns)
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

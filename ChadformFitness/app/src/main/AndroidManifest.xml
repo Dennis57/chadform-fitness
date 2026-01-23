@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChadformFitness">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">  <!-- Set exported to true for launcher activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
