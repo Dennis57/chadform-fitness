@@ -13,10 +13,10 @@
             android:id="@+id/fcv_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll_main"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/ll_main"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/ll_main"
@@ -24,9 +24,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="100"
+            android:background="@drawable/activity_main_bottom_nav_border"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintRight_toRightOf="parent">
 
             <!-- Home -->
             <TextView
@@ -35,10 +36,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
                 android:text="@string/home"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_16"
+                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/baseline_home_36" />
 
             <!-- Calendar -->
@@ -48,10 +49,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
                 android:text="@string/calendar"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_16"
+                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/baseline_calendar_36" />
 
             <!-- Wellness -->
@@ -61,10 +62,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
                 android:text="@string/wellness"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_16"
+                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/baseline_wellness_36" />
 
             <!-- Account -->
@@ -74,10 +75,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
                 android:text="@string/account"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_16"
+                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/baseline_account_circle_36" />
 
         </LinearLayout>
