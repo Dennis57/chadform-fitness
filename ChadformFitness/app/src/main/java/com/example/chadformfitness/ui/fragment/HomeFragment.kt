@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.chadformfitness.R
+import com.example.chadformfitness.adapter.HomeAdapter
 import com.example.chadformfitness.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -58,13 +59,12 @@ class HomeFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        val recyclerView = binding.rvWorkoutSessionList
-
         val numberOfColumns = 2
+        val dataset = arrayOf("Workout Session 1", "Workout Session 2", "Workout Session 3", "Workout Session 4")
 
-        recyclerView.layoutManager =
+        binding.rvWorkoutSessionList.layoutManager =
             GridLayoutManager(activity, numberOfColumns)
-
+        binding.rvWorkoutSessionList.adapter = HomeAdapter(dataset)
 
     }
 

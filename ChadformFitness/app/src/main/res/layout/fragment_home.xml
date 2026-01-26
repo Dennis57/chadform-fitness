@@ -37,7 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
             android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_username">
+            app:layout_constraintTop_toBottomOf="@id/tv_username"
+            tools:listitem="@layout/item_home_adapter"
+            tools:itemCount="5">
 
         </androidx.recyclerview.widget.RecyclerView>
 
