@@ -8,4 +8,9 @@
     <string name="calendar">Calendar</string>
     <string name="wellness">Wellness</string>
     <string name="account">Account</string>
+    <string name="workout_plan">Workout Plan</string>
+    <string name="add_workout">Add Workout</string>
+    <string name="reps">Reps</string>
+    <string name="sets">Sets</string>
+    <string name="time">Time</string>
 </resources>

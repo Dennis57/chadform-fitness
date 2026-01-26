@@ -1,30 +1,25 @@
 package com.example.chadformfitness.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chadformfitness.R
-import com.example.chadformfitness.ui.activity.WorkoutPlanActivity
 
-class HomeAdapter(private val dataSet: Array<String>) :
-    RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class WorkoutPlanAdapter(private val dataSet: Array<String>) :
+    RecyclerView.Adapter<WorkoutPlanAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder)
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView
-        val flWorkoutPlan: FrameLayout
+//        val textView: TextView
 
         init {
             // Define click listener for the ViewHolder's View
-            textView = view.findViewById(R.id.tv_workout_plan)
-            flWorkoutPlan = view.findViewById(R.id.fl_workout_plan)
+//            textView = view.findViewById(R.id.)
         }
     }
 
@@ -32,7 +27,7 @@ class HomeAdapter(private val dataSet: Array<String>) :
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_home_adapter, viewGroup, false)
+            .inflate(R.layout.item_workout_plan_adapter, viewGroup, false)
 
         return ViewHolder(view)
     }
@@ -43,13 +38,7 @@ class HomeAdapter(private val dataSet: Array<String>) :
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         val workoutPlanText = dataSet[position]
-        viewHolder.textView.text = workoutPlanText
-
-        viewHolder.flWorkoutPlan.setOnClickListener {
-            val intent = Intent(viewHolder.itemView.context, WorkoutPlanActivity::class.java)
-            viewHolder.itemView.context.startActivity(intent)
-            // TODO: Pass data of the workout plan to the activity, currently, it's only for placeholders and testing
-        }
+//        viewHolder.textView.text = workoutPlanText
     }
 
     // Return the size of your dataset (invoked by the layout manager)

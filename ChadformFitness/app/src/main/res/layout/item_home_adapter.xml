@@ -4,6 +4,7 @@
 
     <!-- Placeholder values, will be changed later on afeter the design is finished -->
     <FrameLayout
+        android:id="@+id/fl_workout_plan"
         android:layout_width="100dp"
         android:layout_height="80dp"
         android:background="@color/design_default_color_secondary"
