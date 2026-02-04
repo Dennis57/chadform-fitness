@@ -1,6 +1,7 @@
 package com.example.chadformfitness.database.dao
 
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 import com.example.chadformfitness.database.entity.WorkoutSet
 
@@ -8,4 +9,6 @@ import com.example.chadformfitness.database.entity.WorkoutSet
 interface WorkoutSetDao {
     @Query("SELECT * FROM workoutset")
     fun getAll(): List<WorkoutSet>
+
+    @Insert fun insert(workoutSet: WorkoutSet)
 }

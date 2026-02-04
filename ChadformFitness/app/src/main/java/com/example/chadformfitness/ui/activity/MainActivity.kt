@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.example.chadformfitness.R
+import com.example.chadformfitness.database.AppDatabase
 import com.example.chadformfitness.databinding.ActivityMainBinding
 import com.example.chadformfitness.ui.fragment.AccountFragment
 import com.example.chadformfitness.ui.fragment.CalendarFragment
