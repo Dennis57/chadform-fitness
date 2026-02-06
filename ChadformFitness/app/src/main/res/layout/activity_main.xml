@@ -13,75 +13,86 @@
             android:id="@+id/fcv_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/ll_main"
+            app:layout_constraintBottom_toTopOf="@id/bnv_main"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/ll_main"
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="100"-->
+<!--            android:background="@drawable/activity_main_bottom_nav_border"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent">-->
+
+<!--            &lt;!&ndash; Home &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="25"-->
+<!--                android:text="@string/home"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_16"-->
+<!--                android:textStyle="bold"-->
+<!--                app:drawableTopCompat="@drawable/baseline_home_36" />-->
+
+<!--            &lt;!&ndash; Calendar &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_calendar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="25"-->
+<!--                android:text="@string/calendar"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_16"-->
+<!--                android:textStyle="bold"-->
+<!--                app:drawableTopCompat="@drawable/baseline_calendar_36" />-->
+
+<!--            &lt;!&ndash; Wellness &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_wellness"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="25"-->
+<!--                android:text="@string/wellness"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_16"-->
+<!--                android:textStyle="bold"-->
+<!--                app:drawableTopCompat="@drawable/baseline_wellness_36" />-->
+
+<!--            &lt;!&ndash; Account &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_account"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="25"-->
+<!--                android:text="@string/account"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_16"-->
+<!--                android:textStyle="bold"-->
+<!--                app:drawableTopCompat="@drawable/baseline_account_circle_36" />-->
+
+<!--        </LinearLayout>-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            android:background="@drawable/activity_main_bottom_nav_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_nav_main">
 
-            <!-- Home -->
-            <TextView
-                android:id="@+id/tv_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:text="@string/home"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_16"
-                android:textStyle="bold"
-                app:drawableTopCompat="@drawable/baseline_home_36" />
-
-            <!-- Calendar -->
-            <TextView
-                android:id="@+id/tv_calendar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:text="@string/calendar"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_16"
-                android:textStyle="bold"
-                app:drawableTopCompat="@drawable/baseline_calendar_36" />
-
-            <!-- Wellness -->
-            <TextView
-                android:id="@+id/tv_wellness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:text="@string/wellness"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_16"
-                android:textStyle="bold"
-                app:drawableTopCompat="@drawable/baseline_wellness_36" />
-
-            <!-- Account -->
-            <TextView
-                android:id="@+id/tv_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:text="@string/account"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_16"
-                android:textStyle="bold"
-                app:drawableTopCompat="@drawable/baseline_account_circle_36" />
-
-        </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
